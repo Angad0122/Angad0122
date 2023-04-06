@@ -1,0 +1,53 @@
+function generateRandom(max = 100){
+    let a = Math.random()*max
+    a = Math.floor(a)
+    return a
+}
+let n = generateRandom()
+let c = 1
+let u 
+
+
+
+for(let i=0;i<=100;i++){
+    if(i==0)
+    {
+         console.log("you have to guess number between 1 to 100 \n")
+    u=prompt("Enter the number you guessed : ")
+    }
+    else
+    {
+         console.log("\n\n\nyou have to guess number between 1 to 100 \n")
+    u=prompt("Enter the number you guessed : ")
+    }
+
+
+
+    if(u<=0 || u>=100)
+    {
+        console.log("wrong input ")
+         console.log("you have to guess number between 1 to 100 \n")
+    }
+    else
+    {
+        if(u==n)
+        {
+            console.log("Congratulations! You guessed right number ")
+            console.log("You had taken ",c,"chance to guess ")
+            break
+        }
+        else if(u>n)
+        {
+            console.log("You guessed wrong number ")
+            console.log("The number is smaller than ",u)
+            c++
+        }
+        else if(u<n)
+        {
+            console.log("You guessed wrong number ")
+            console.log("The number is greater than ",u)
+            c++
+        }
+    }
+}
+
