@@ -1,0 +1,68 @@
+console.log("Hello! You have to choose from \n1. Snake\n2. Water\n3. Gun")
+
+
+let a 
+let cg
+let n
+let u
+let yesorno
+
+
+function generateRandom(){
+    let a = Math.random()*3
+    a = Math.floor(a)
+    return a
+}
+
+
+
+while(1){
+    n = generateRandom()
+
+    if(n==0)
+        cg = "s"
+    else if(n==1)
+        cg = "w"
+    else if(n==2)
+        cg = "g"
+
+    ug = prompt("Enter what you have guessed :")
+
+
+    if(cg=="w")
+    {
+        if(ug=="w")
+            console.log("Computer guessed the same ")
+        else if(ug=="g")
+            console.log("you lose ")
+        else if(ug=="s")
+            console.log("you won ")
+    }
+    if(cg=="g")
+    {
+        if(ug=="g")
+            console.log("Computer guessed the same ")
+        else if(ug=="w")
+            console.log("you lose ")
+        else if(ug=="s")
+            console.log("you won ")
+    }
+    if(cg=="s")
+    {
+        if(ug=="s")
+            console.log("Computer guessed the same ")
+        else if(ug=="w")
+            console.log("you lose ")
+        else if(ug=="g")
+            console.log("you won ")
+    }
+    yesorno=prompt("Do you want to play again :")
+    
+    if(yesorno=="y")
+        continue
+    else if(yesorno=="n")
+    {
+        console.log("Hope you will play again")
+        break
+    }
+}
